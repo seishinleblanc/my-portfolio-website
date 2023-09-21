@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
+    --bg-color: #1c1d1f;
+    --second-bg-color: #17181a;
     --text-color: #ededed;
-    --main-color: #00abf0;
+    --main-color: #8f6db7;
 }
 
 html {
@@ -65,7 +65,14 @@ body {
     transition: .3s;
 }
 
-.navbar a:hover,
+.navbar a:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 5px var(--main-color),
+                0 0 10px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 20px var(--main-color);
+}
+
 .navbar a.active {
     color: var(--main-color);
 }
@@ -118,7 +125,7 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: .7px var(--main-color);
+    /* -webkit-text-stroke: .7px var(--main-color); */
     background-image: linear-gradient(var(--main-color), var(--main-color));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
@@ -169,7 +176,8 @@ section {
     height: 100%;
     background: var(--main-color);
     border: .2rem solid var(--main-color);
-    border-radius: .8rem;
+    border-radius: 3rem;
+    /* border-radius was originally .6rem */
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -179,7 +187,8 @@ section {
     transition: .5s;
 }
 
-.btn-box .btn:hover {
+/* --------- ORIGINAL BUTTONS ----------- 
+/* .btn-box .btn:hover {
     color: var(--main-color);
 }
 
@@ -211,11 +220,141 @@ section {
 .btn-box .btn:hover::before {
     width: 100%;
 }
+--------- ORIGINAL BUTTONS ----------- */
 
+ /* ---------NEON BUTTONS----------- */
+
+ .btn-box .btn{
+    background: transparent;
+    color: var(--main-color);
+    /* border: none; */
+ }
+ .btn-box .btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 50px var(--main-color);
+    /* -webkit-box-reflect: below 1px
+    linear-gradient(transparent, #0005); */
+}
+
+/* .btn-box .btn:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+.btn-box .btn:nth-child(2) {
+    filter: hue-rotate(110deg);
+} */
+
+/* ----- NEON BORDER FILL IN -----
+
+.btn-box .btn span {
+    position: absolute;
+    display: block;
+}
+
+.btn-box .btn span:nth-child(1) {
+    animation: neonEdge1 6s linear infinite;
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 60px var(--main-color);
+    animation-delay: 2s;
+}
+
+.btn-box .btn span:nth-child(2) {
+    animation: neonEdge2 6s linear infinite;
+    animation-delay: 1.5s;
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 60px var(--main-color);
+}
+
+.btn-box .btn span:nth-child(3) {
+    animation: neonEdge3 6s linear infinite;
+    animation-delay: 3s;
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 60px var(--main-color);
+}
+
+.btn-box .btn span:nth-child(4) {
+    animation: neonEdge4 6s linear infinite;
+    animation-delay: 4.5s;
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 60px var(--main-color);
+}
+
+----- NEON BORDER FILL IN ----- */
+
+/* -----CIRCLE BORDERS ANIMATION ON HOVER-----
+.btn-box .btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,var(--main-color));
+}
+
+.btn-box .btn:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.btn-box .btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,var(--main-color));
+}
+
+.btn-box .btn:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.btn-box .btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--main-color));
+}
+
+.btn-box .btn:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.btn-box .btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,var(--main-color));
+}
+
+.btn-box .btn:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+-----CIRCLE BORDERS ANIMATION ON HOVER----- */
+
+/* ---------NEON BUTTONS---------- */
 .home-sci {
     position: absolute;
     bottom: 4rem;
-    width: 170px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -239,6 +378,11 @@ section {
 
 .home-sci a:hover {
     color: var(--bg-color);
+    background: var(--main-color);
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 50px var(--main-color);
 }
 
 .home-sci a::before {
@@ -253,15 +397,15 @@ section {
     transition: .5s;
 }
 
-.home-sci a:hover::before {
+/* .home-sci a:hover::before {
     width: 100%;
-}
+} */
 
 .home-imgHover {
     position: absolute;
     top: 0;
     right: 0;
-    width: 45%;
+    width: 55%;
     height: 100%;
     background: transparent;
     transition: 3s;
@@ -440,10 +584,11 @@ span {
     padding-top: .5rem;
 }
 
+/* ----- SKILLS SECTION -----
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .skills h2 {
@@ -558,10 +703,111 @@ span {
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
     width: 0%;
 }
+----- SKILLS SECTION ----- */
+/* ----- PROJECTS SECTION ----- */
+
+.projects {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--bg-color);
+}
+
+.projects h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects .projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.projects-row .projects-column {
+    flex: 1 1 40rem;
+}
+
+.projects-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.projects-column .projects-box {
+    position: relative;
+}
+
+.projects-box .projects-content {
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+    max-width: 50rem;
+}
+
+.projects-box .projects-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.projects-box .projects-content:hover::before {
+    width: 100%;
+}
+
+
+.projects-content .progress {
+    padding: 1rem 0;
+}
+
+.projects-content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-content .progress h3 span {
+    color: var(--text-color);
+}
+
+.projects-content .progress .bar {
+    height: 20.5rem;
+    border-radius: 3rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0;
+    max-width: 50rem;
+    background: url('/images/about.jpg') no-repeat;
+    background-size: contain;
+}
+
+.projects-content .progress .bar a img {
+    width: 100%;
+}
+
+/* .projects-content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+    background: url('/images/about.jpg') no-repeat;
+    background-size: 100%;
+} */
 
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--second-bg-color);
 }
 
 .contact h2 {
@@ -597,7 +843,8 @@ span {
     font-size: 1.6rem;
     color: var(--text-color);
     background: transparent;
-    border-radius: .6rem;
+    border-radius: 3rem; 
+    /*  border-radius: originally .6rem */
     border: .2rem solid var(--main-color);
 }
 
@@ -613,7 +860,8 @@ span {
     width: 0;
     height: 100%;
     background: var(--second-bg-color);
-    border-radius: .6rem;
+    border-radius: 3rem;
+    /*  border-radius: originally .6rem */
     z-index: -1;
     transition: .5s;
 }
@@ -645,7 +893,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text,
@@ -663,9 +911,10 @@ span {
     justify-content: center;
     align-items: center;
     padding: .8rem;
-    background: var(--main-color);
+    background: var(--bg-color);
     border: .2rem solid var(--main-color);
-    border-radius: .6rem;
+    border-radius: 50%;
+    /* border-radius: .6rem; */
     z-index: 1;
     overflow: hidden;
 }
@@ -677,7 +926,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--main-color);
     z-index: -1;
     transition: .5s;
 }
@@ -688,12 +937,12 @@ span {
 
 .footer-iconTop a i {
     font-size: 2.4rem;
-    color: var(--bg-color);
+    color: var(--main-color);
     transition: .5s;
 }
 
 .footer-iconTop a:hover i {
-    color: var(--main-color);
+    color: var(--bg-color);
 }
 
 /* ANIMATION RELOAD AND SCROLL  */
@@ -725,9 +974,12 @@ span {
     animation: none;
 }
 
-section:nth-child(odd) .animate.scroll,
-.footer .animate.scroll {
+section:nth-child(odd) .animate.scroll {
     background: var(--second-bg-color);
+}
+
+.footer .animate.scroll {
+    background: var(--bg-color);
 }
 
 .education .education-box .animate.scroll {
@@ -737,6 +989,7 @@ section:nth-child(odd) .animate.scroll,
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
+.projects.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
@@ -949,3 +1202,61 @@ section:nth-child(odd) .animate.scroll,
         width: 0;
     }
 }
+
+/* ----- KEYFRAMES FOR NEON MOVING BORDER -----
+@keyframes neonEdge1 {
+    0% {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,var(--main-color));
+    }
+    
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes neonEdge2 {
+    0% {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,var(--main-color));
+    }
+    
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes neonEdge3 {
+    0% {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,var(--main-color));
+    }
+    
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes neonEdge4 {
+    0% {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,var(--main-color));
+    }
+    
+    100% {
+        bottom: 100%;
+    }
+}
+----- KEYFRAMES FOR NEON MOVING BORDER ----- */
