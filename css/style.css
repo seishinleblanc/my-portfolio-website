@@ -13,6 +13,7 @@
 
 a {
     text-decoration: none;
+    color: var(--text-color)
 }
 
 a:visited {
@@ -195,6 +196,26 @@ section {
     transition: .5s;
 }
 
+button {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+        background: transparent;
+        border: .2rem solid var(--main-color);
+        border-radius: 3rem;
+        /* border-radius was originally .6rem */
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: var(--main-color);
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+}
+
 /* --------- ORIGINAL BUTTONS ----------- 
 /* .btn-box .btn:hover {
     color: var(--main-color);
@@ -237,6 +258,18 @@ section {
     color: var(--main-color);
     /* border: none; */
  }
+
+ button:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 5px var(--main-color),
+                0 0 15px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 50px var(--main-color);
+    /* -webkit-box-reflect: below 1px
+    linear-gradient(transparent, #0005); */
+}
+
 
  .btn-box .btn:hover {
     background: var(--main-color);
@@ -417,7 +450,7 @@ section {
     width: 55%;
     height: 100%;
     background: transparent;
-    transition: 3s;
+    transition: 1.5s;
 }
 
 .home-imgHover:hover{
@@ -1065,6 +1098,15 @@ section:nth-child(odd) .animate.scroll {
 }
 
 @media (max-width: 768px) {
+
+    .home{
+        background: var(--bg-color);
+    }
+
+    .home-imgHover {
+        transition: 0s;
+    }
+    
     .header {
         background: var(--bg-color)
     }
@@ -1123,11 +1165,11 @@ section:nth-child(odd) .animate.scroll {
         transition-delay: .25s;
     }
 
-    .home-imgHover {
+    /* .home-imgHover {
         pointer-events: none;
         background: var(--bg-color);
         opacity: .6;
-    }
+    } */
 }
 
 @media (max-width: 520px) {
