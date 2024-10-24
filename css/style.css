@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+    font-family: 'cyberFont' ;
+    src: url(/fonts/conthrax-sb.otf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +12,17 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family:'Poppins', sans-serif;
+    font-family:'cyberFont';
+    letter-spacing: .2rem;
 }
 
 a {
     text-decoration: none;
     color: var(--text-color)
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a:visited {
@@ -24,7 +33,8 @@ a:visited {
     --bg-color: #1c1d1f;
     --second-bg-color: #17181a;
     --text-color: #ededed;
-    --main-color: #8f6db7;
+    --main-color: #6cb4ef;
+    /* --main-color: #8f6db7; */
 }
 
 html {
@@ -103,7 +113,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/home4.jpg') no-repeat;
+    background: url('/images/home-image5.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -131,7 +141,7 @@ section {
 }
 
 .home-content .text-animate h3 {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: transparent;
     /* -webkit-text-stroke: .7px var(--main-color); */
@@ -187,7 +197,7 @@ section {
     border: .2rem solid var(--main-color);
     border-radius: 3rem;
     /* border-radius was originally .6rem */
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: .1rem;
     color: var(--bg-color);
@@ -443,7 +453,7 @@ button {
     width: 100%;
 } */
 
-.home-imgHover {
+/* .home-imgHover {
     position: absolute;
     top: 0;
     right: 0;
@@ -456,7 +466,7 @@ button {
 .home-imgHover:hover{
     background: #1c1d1f;
     opacity: .8;
-}
+} */
 
 .about {
     display: flex;
