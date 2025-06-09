@@ -12,9 +12,16 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family:'cyberFont';
+    /* font-family:'cyberFont'; */
     letter-spacing: .2rem;
 }
+  
+  h1, h2, h3, .logo {
+    font-family: 'cyberFont';
+    letter-spacing: 0.2rem;
+  }
+  
+
 
 a {
     text-decoration: none;
@@ -22,7 +29,9 @@ a {
 }
 
 p {
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 a:visited {
@@ -45,6 +54,8 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .header {
@@ -59,6 +70,7 @@ body {
     align-items: center;
     z-index: 100;
     transition: .3s;
+    font-family:'cyberFont';
 }
 
 .header.sticky {
@@ -204,6 +216,7 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+    font-family:'cyberFont';
 }
 
 button {
@@ -774,10 +787,13 @@ span {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    align-items: stretch;
 }
 
 .projects-row .projects-column {
     flex: 1 1 40rem;
+    display: flex;
+
 }
 
 .projects-column .title {
@@ -788,17 +804,21 @@ span {
 }
 
 .projects-column .projects-box {
-    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-box .projects-content {
-    position: relative;
-    border: .2rem solid var(--main-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* spreads image and text evenly */
+    height: 100%; /* 🧠 forces this to fill available vertical space */
+    padding: 1.5rem;
     border-radius: 3rem;
-    padding: .5rem 1.5rem;
-    z-index: 1;
-    overflow: hidden;
-    max-width: 50rem;
+    border: 0.2rem solid var(--main-color);
+    max-width: 100%;
 }
 
 .projects-box .projects-content::before {
@@ -1348,3 +1368,109 @@ section:nth-child(odd) .animate.scroll {
     }
 }
 ----- KEYFRAMES FOR NEON MOVING BORDER ----- */
+
+.project-page {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 60px 20px;
+  }
+  
+  .project-breakdown {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--second-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    font-size: 1.7rem; /* Increased from default */
+    line-height: 1.9;
+  }
+  
+  .project-breakdown h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+  }
+  
+  .project-breakdown h2 {
+    font-size: 2.2rem;
+    margin-top: 40px;
+    color: var(--main-color); /* use your accent variable */
+  }
+  
+  .project-breakdown p,
+  .project-breakdown li {
+    margin-bottom: 20px;
+  }
+  
+  .project-breakdown ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 0 12px rgba(144, 196, 233, 0.2);
+  }
+  
+  .cta-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--main-color);
+    color: #000;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-link:hover {
+    background-color: #7bb3d6;
+  }
+  
+  .back-link {
+    margin-top: 50px;
+    display: block;
+    font-size: 1.4rem;
+    color: #aaa;
+  }
+  
+  .back-link a {
+    color: #aaa;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+  
+  .back-link a:hover {
+    color: #ffffff;
+  }
+  
+  .project-breakdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.9;
+    letter-spacing: 0.05rem;
+  }
+  
+  .project-breakdown p,
+  .project-breakdown li,
+  .project-breakdown a,
+  .project-breakdown ul {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  
+  .project-breakdown h1,
+  .project-breakdown h2 {
+    font-family: 'cyberFont';
+    letter-spacing: 0.2rem;
+  }
+  
