@@ -1216,6 +1216,10 @@ section:nth-child(odd) .animate.scroll {
         width: 160px;
     }
 
+    .projects-content .progress h3 {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
     .home-sci a {
         width: 38px;
         height: 38px;
