@@ -85,6 +85,10 @@ body {
     word-break: break-word;
 }
 
+.logo-short {
+    display: none;
+}
+
 .navbar {
     position: relative;
 }
@@ -488,7 +492,7 @@ button {
     flex-direction: column;
     gap: 2rem;
     background: var(--second-bg-color);
-    padding-bottom: 6rem;
+    padding: 10rem 0 6rem;
 }
 
 .heading {
@@ -909,8 +913,8 @@ span {
 
 .contact {
     min-height: auto;
-    padding-bottom: 7rem;
     background: var(--second-bg-color);
+    padding: 10rem 0 7rem;
 }
 
 .contact h2 {
@@ -1213,6 +1217,14 @@ section:nth-child(odd) .animate.scroll {
 
     .logo {
         font-size: 2rem;
+    }
+
+    .logo-full {
+        display: none;
+    }
+
+    .logo-short {
+        display: inline;
     }
 
     .home-content h1 {
