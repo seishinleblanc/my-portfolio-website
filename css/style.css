@@ -418,11 +418,10 @@ button {
 
 /* ---------NEON BUTTONS---------- */
 .home-sci {
-    position: absolute;
-    bottom: 4rem;
     width: 100px;
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
 }
 
 .home-sci a {
@@ -549,6 +548,8 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
     overflow-wrap: anywhere;
+    word-wrap: break-word;
+    max-width: 100%;
     padding: 0 1rem;
 }
 
